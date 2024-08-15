@@ -13,8 +13,12 @@ echo "my name is $name"
 sport="football"
 echo "my favourite game is ${sport}"
 
+# setting up enviroment variable
+export varName="example"
+
 # Setting up a variable which is output of a command
 files=$(ls)  # now echo $files  will display the list of files 
+
 
 
 
