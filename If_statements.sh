@@ -55,3 +55,16 @@ fi
 # -w – file is writable
 # -r – file is readable
 
+# another example
+---------------------
+if grep -q "abc" ttest.txt
+then 
+    echo "hi"
+fi
+
+# Double condition or -  || && 
+if grep -q "abc" ttest.txt || if grep -q "DEF" ttest.txt 
+then 
+    echo "hi"
+fi
+
