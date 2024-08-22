@@ -50,7 +50,13 @@ This will create List.txt file and add the output of ls -l there
 - Example: `ls -l >> List.txt` (>> appends) <br>
 This will create List.txt file and add the output of ls -l there 
 
--`find nameoflogs 2> /dev/null` will redirect all the 2(unsuccfull outputs) outputs to no where  
+-`find nameoflogs 2> /dev/null` will redirect all the 2(unsuccfull outputs) outputs to no where 
+
+## Redirecting input
+`sort < unsortedlist.txt`
+`cat 0< input.txt`
+`sort < unsortedlist.txt > sortedlist.txt`
+
 
 ## grep 
 global regular expression print <br>
@@ -67,17 +73,38 @@ some options :
  - `grep -r` recurrcivesly find the match even within directory
 
 
-## streams
-- 0 standard input
-- 1 standard output
+## data streams
+- 0 standard input 
+- 1 standard output 
 - 2 standard error
-   
+**echo $? is a varibale that shows 0 if previous command was successful - if not 0 then it is an error**
+
 -`find nameoflogs 2> error.txt` will write the error outputs in the  error txt file
 -`find nameoflogs 1> success.txt` will write the succesful outputs in the  success  txt file
 
--`find nameoflogs 2> /dev/null` will redirect all the 2(unsuccfull outputs) outputs to no where 
+-`find nameoflogs 1>success.txt 2>/dev/null` will redirect all the 2(unsuccfull outputs) outputs to no where 
 
-echo $? is a varibale that shows 0 if previous command was successful - if not 0 then it is an error
+
   
  
- 
+## file archive or extract
+
+` tar -cvf archive_name.tar /path/to/files`  to  archive 
+`tar -cvzf archive_name.tar.gz /path/to/files` to compress and arcchive 
+`tar -xvf  archive_name.tar` - to extract 
+`tar -tvf  archive_name.tar` - just to view what is inside
+
+some useful options 
+c: Create a new archive.
+v: Verbose mode (shows you what’s being added to the archive).
+f: Specifies the filename of the archive.
+x: Extract files from an archive.
+z: Compress the archive using gzip.
+t: List the contents of the archive.
+
+
+## storeing sh scripts 
+
+ ideal practise to store the files in4
+ `/usr/local/bin/` 
+ this is how we can create our own command 😁
