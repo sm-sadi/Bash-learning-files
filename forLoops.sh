@@ -5,7 +5,6 @@ do
     echo $current_number
     sleep 1
 done
-
 echo " this is outside the loop"
 
 # ex two
@@ -13,8 +12,12 @@ for n in {1..10}
 do 
  echo $n
 done
-
 echo " this is outside the loop"
+
+# example
+for ((i=0; i<10; i++)); do
+    echo $i
+done
 
 # a for loop that chehck if there are files and archive them 
 for file in somefolder/*.log
