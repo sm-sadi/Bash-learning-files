@@ -12,7 +12,7 @@ write_all_files_names() {
 write_all_files_names
 
 
-# passing agrgument
+# passing agrgument    #  $# - shows how many arguuments passed ``
 
 # Define a function that adds two numbers
 add_numbers() {
